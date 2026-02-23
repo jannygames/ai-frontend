@@ -27,9 +27,9 @@ export function ChatPanel({
   onStop,
 }: ChatPanelProps) {
   return (
-    <section className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 pb-4 pt-3">
+    <section className="flex h-full flex-col gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 pb-4 pt-3">
       {/* Messages */}
-      <div className="max-h-[520px] flex-1 space-y-3 overflow-y-auto rounded-xl border border-dashed border-slate-200 bg-white p-3 text-sm">
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto rounded-xl border border-dashed border-slate-200 bg-white p-3 text-sm">
         {/* System prompt card */}
         <div className="rounded-lg border border-dashed border-amber-200 bg-amber-50 px-3 py-2 text-slate-800">
           <div className="mb-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-slate-500">
