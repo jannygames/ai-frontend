@@ -118,6 +118,12 @@ export function ChatPanel({
           placeholder="Type your prompt here..."
           value={message}
           onChange={(event) => onMessageChange(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' && !event.shiftKey) {
+              event.preventDefault()
+              onSubmit(event as unknown as FormEvent)
+            }
+          }}
           disabled={isStreaming}
           rows={4}
         />
